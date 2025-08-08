@@ -84,13 +84,12 @@ public class frog27644437 : MonoBehaviour {
             answer[i] = new List<int>();
         };
  
-        double stupidDouble = UnityEngine.Random.Range(60466176, 2176782336);
-        long solution = (long)Math.Round(stupidDouble);
+        long solution = (long)Math.Round((decimal)UnityEngine.Random.Range(60466176, 2176782336));
         //solution = 2100243584;
         //solution = 27644436;
 
         serial.text = Base36(solution);
-        Debug.LogFormat("[27644437 #{0}] Module Serial: {1}", moduleId, solution);
+        Debug.LogFormat("[27,644,437 #{0}] Module Serial: {1}", moduleId, solution);
 
         finalSubsets = CalcFile.CalcAnswer(solution, moduleId);
 
@@ -101,10 +100,10 @@ public class frog27644437 : MonoBehaviour {
         }
         string dddd = "";
         foreach (List<int> item in DebugAnswer) if (item.Count != 0) { { dddd += "{"; foreach (int fucker in item) { dddd += (fucker + ", "); } dddd += "}"; } }
-        Debug.LogFormat("[27644437 #{0}] {1}", moduleId, dddd);
+        Debug.LogFormat("[27,644,437 #{0}] {1}", moduleId, dddd);
 
         string aaaa = ""; foreach (int item in finalSubsets) { aaaa += (item + ", "); }
-        Debug.LogFormat("[27644437 #{0}] {1}", moduleId, aaaa);
+        Debug.LogFormat("[27,644,437 #{0}] {1}", moduleId, aaaa);
     }
 
     void PressLed(KMSelectable led)
@@ -129,7 +128,7 @@ public class frog27644437 : MonoBehaviour {
         {
             moduleSolved = true;
             GetComponent<KMBombModule>().HandlePass();
-            Debug.LogFormat("[27644437 #{0}] is freaking solved", moduleId);
+            Debug.LogFormat("[27,644,437 #{0}] is freaking solved", moduleId);
 
             AnimActive = true;
         }
